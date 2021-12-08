@@ -3,14 +3,13 @@ import { View, Text } from 'react-native'
 import Layout from "../navigation/Layout";
 import { Button } from "react-native-elements";
 
-
-const FirstScreen = ({ navigation, route }) => {
+const StoreTabScreen = ({ navigation, route }) => {
     return (
         <>
-            <Layout />
+            <Layout name="Store Tab" />
             <Button
                 type="solid"
-                title="Fourth Screen"
+                title="Go To Drawer"
                 containerStyle={{
                     justifyContent: "center",
                     alignItems: "center",
@@ -27,9 +26,8 @@ const FirstScreen = ({ navigation, route }) => {
                 }}
                 onPress={() => navigation.navigate("drawer")}
             />
-
         </>
     )
 }
 
-export default FirstScreen
+export default StoreTabScreen

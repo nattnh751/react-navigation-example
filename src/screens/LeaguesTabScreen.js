@@ -2,12 +2,12 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import Layout from "../navigation/Layout";
 
-const FirstScreen = ({ navigation, route }) => {
+const LeaguesTabScreen = ({ navigation, route }) => {
     return (
         <>
-            <Layout />
+            <Layout name="LeaguesTab Tab" />
         </>
     )
 }
 
-export default FirstScreen
+export default LeaguesTabScreen

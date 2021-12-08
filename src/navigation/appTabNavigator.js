@@ -3,8 +3,9 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-import FirstScreen from "../screens/FirstScreen";
-import SecondScreen from "../screens/SecondScreen";
+import HomeTabScreen from "../screens/HomeTab";
+import StoreTabScreen from "../screens/StoreTabScreen";
+import LeaguesTabScreen from "../screens/LeaguesTabScreen";
 
 const AppBottomNavigator = createMaterialBottomTabNavigator();
 const AppTopNavigator = createMaterialTopTabNavigator();
@@ -21,44 +22,44 @@ const SecondScreenTopTabNavigator = () => (
             tabStyle: { height: 100, justifyContent: "flex-end" }
         }}
     >
-        <AppTopNavigator.Screen component={SecondScreen} name="CHATS" />
-        <AppTopNavigator.Screen component={SecondScreen} name="REQUESTS" />
+        <AppTopNavigator.Screen component={StoreTabScreen} name="Store" />
+        <AppTopNavigator.Screen component={LeaguesTabScreen} name="Leagues" />
     </AppTopNavigator.Navigator>
 );
 
 const AllScreenTabNavigator = () => (
     <AppBottomNavigator.Navigator
-        initialRouteName="First"
+        initialRouteName="Home"
         screenOptions={{
             tabBarColor: "#490222"
         }}
     >
         <AppBottomNavigator.Screen
-            name="First"
-            component={FirstScreen}
+            name="Home"
+            component={HomeTabScreen}
             options={{
                 tabBarIcon: () => <Icon name="book-open" size={25} color="#fff" />
             }}
         />
         <AppBottomNavigator.Screen
-            name="First Two"
-            component={FirstScreen}
+            name="Store"
+            component={StoreTabScreen}
             options={{
                 tabBarIcon: () => <Icon name="file-alt" size={25} color="#fff" />
             }}
         />
         <AppBottomNavigator.Screen
-            name="Second"
-            children={SecondScreenTopTabNavigator}
+            name="Leagues"
+            children={LeaguesTabScreen}
             options={{
                 tabBarIcon: () => <Icon name="comment-alt" size={25} color="#fff" />
             }}
         />
         <AppBottomNavigator.Screen
-            name="Second Two"
+            name="Top Tab Example"
             children={SecondScreenTopTabNavigator}
             options={{
-                tabBarIcon: () => <Icon name="user" size={25} color="#fff" />
+                tabBarIcon: () => <Icon name="comment-alt" size={25} color="#fff" />
             }}
         />
     </AppBottomNavigator.Navigator>

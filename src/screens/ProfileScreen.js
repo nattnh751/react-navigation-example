@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import Layout from "../navigation/Layout";
 
-const FirstScreen = ({ navigation, route }) => {
+const ProfileScreen = ({ navigation, route }) => {
     return (
         <>
             <Layout />
@@ -10,4 +10,4 @@ const FirstScreen = ({ navigation, route }) => {
     )
 }
 
-export default FirstScreen
+export default ProfileScreen

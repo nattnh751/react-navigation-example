@@ -1,14 +1,14 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import FourthScreen from '../screens/FourthScreen'
-import FifthScreen from '../screens/FifthScreen'
+import ProfileScreen from '../screens/ProfileScreen'
+import DeepLinkTestScreen from '../screens/DeepLinkTestScreen'
 
 const Drawer = createDrawerNavigator();
 const AllDrawerNavigation = () => (
-    <Drawer.Navigator initialRouteName='Fourth'>
-        <Drawer.Screen component={FourthScreen} name='Fourth' />
-        <Drawer.Screen component={FifthScreen} name='Fifth' />
-    </Drawer.Navigator>
+    <Drawer.Navigator initialRouteName='Profile' screenOptions={{ drawerPosition: 'right' }}>
+        <Drawer.Screen component={ProfileScreen} name='Profile' />
+        <Drawer.Screen component={DeepLinkTestScreen} name='Deep Link Test' />
+    </Drawer.Navigator >
 )
 
 export default AllDrawerNavigation;

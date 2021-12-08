@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
 
-import ThirdScreen from '../screens/ThirdScreen'
+import ThirdScreen from '../screens/StackScreen'
 
 const StackNavigator = createStackNavigator();
 

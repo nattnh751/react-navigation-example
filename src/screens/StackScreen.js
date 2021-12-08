@@ -3,13 +3,14 @@ import { View, Text } from 'react-native'
 import Layout from "../navigation/Layout";
 import { Button } from "react-native-elements";
 
-const FirstScreen = ({ navigation, route }) => {
+
+const StackScreen = ({ navigation, route }) => {
     return (
         <>
-            <Layout />
+            <Layout name="Stack Example" />
             <Button
                 type="solid"
-                title="Third Screen"
+                title="Go To Leagues Tab"
                 containerStyle={{
                     justifyContent: "center",
                     alignItems: "center",
@@ -24,10 +25,11 @@ const FirstScreen = ({ navigation, route }) => {
                 titleStyle={{
                     color: "#fff"
                 }}
-                onPress={() => navigation.navigate("stack")}
+                onPress={() => navigation.navigate("tab", { screen: "Leagues" })}
             />
+
         </>
     )
 }
 
-export default FirstScreen
+export default StackScreen
