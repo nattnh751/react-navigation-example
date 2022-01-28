@@ -17,16 +17,19 @@ const AllDrawerNavigation = () => (
                 style={{
                     backgroundColor: 'red',
                     height: 80,
-                    alignItems: 'right',
+                    display: 'flex',
+                    alignContent: 'flex-end',
+                    alignItems: 'flex-end',
                     width: '100%',
                 }}>
                 <TouchableOpacity
                     style={{
                         backgroundColor: 'white',
                         color: 'black',
-                        height: 80,
+                        height: 60,
                         width: 40,
-                        marginEnd: 0,
+                        right: 0,
+                        alignSelf: 'flex-end',
                     }}
                     onPress={() => { props.navigation.toggleDrawer() }} />
             </View>
@@ -47,7 +50,7 @@ function CustomDrawerContent(props) {
             />
             <DrawerItem
                 label="Profile"
-                onPress={() => props.navigation.navigate("profile")}
+                onPress={() => props.navigation.push("profile")}
             />
         </DrawerContentScrollView>
     );
